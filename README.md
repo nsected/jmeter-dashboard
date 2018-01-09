@@ -4,6 +4,6 @@
 
 Jtl файлы jmeter загружаются при помощи backend/push_jmeter_results.js
 
-Установка: 
-npm install
-npm express_start
+>Установка: 
+* npm install
+* npm express_start
