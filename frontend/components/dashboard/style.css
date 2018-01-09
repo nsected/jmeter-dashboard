@@ -1,0 +1,59 @@
+.main-contant .build-list{
+  -webkit-flex: auto;
+  flex: auto;
+}
+
+.main-contant .build-item{
+  width: 90%;
+}
+
+@media  (min-width: 768px) {
+  .job-list-sidebar {
+    position: fixed!important;
+    height: 100%;
+  }
+}
+
+.build-item {
+  border-left: 1px solid #ddd;
+}
+
+.br-w{
+  word-wrap: break-word;
+}
+
+.fx-scroll{
+  overflow-y: scroll;
+  height: calc(100% - 150px);
+  position: fixed;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+  border: none;
+}
+
+#build-list-from{
+  border-top: 2px solid #e9ecef !important;
+}
+
+.build-table{
+  width: 100%;
+}
+
+.build-item{
+background-color: #ebeced!important;
+  margin-left: -1px;
+}
+
+.build-wrapper{
+  height: 100%;
+}
+
+.build-table-contant{
+   border-left: 1px solid #ddd;
+ }

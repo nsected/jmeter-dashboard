@@ -1,0 +1,14 @@
+<div class="dashboard">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block  sidebar  bg-dark job-list-sidebar pt-3 pl-3 pr-3">
+          <job_list></job_list>
+        </nav>
+      <main role="main" class="col-sm-9 ml-sm-auto col-md-10 main-contant d-flex">
+        <job v-if="$route.params.name"></job>
+        <build v-if="$route.params.build"></build>
+      </main>
+
+    </div>
+  </div>
+</div>

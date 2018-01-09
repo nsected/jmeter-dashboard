@@ -1,0 +1,43 @@
+<div class="build-list  pt-3  " id="build-list-from" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+  <h2 class="br-w pl-3 pr-3">Проект {{ $route.params.name | underscoresFilter}}</h2>
+  <div class="">
+    <svg  width="100%" height="450" id="jobsPerformanceChart"></svg>
+  </div>
+  <div class="pr-4">
+    <table class="table table-striped mb-0 table-borderless">
+    <thead >
+    <tr>
+      <th>Номер сборки</th>
+      <th>Ошибок на сборку</th>
+      <th v-if="!$route.params.build">Количество запросов</th>
+      <th v-if="!$route.params.build">Среднее время ответа сервера</th>
+    </tr>
+    </thead>
+    </table>
+  <div class="fx-scroll"  id="build-list-to" style="height: calc(100% - 150px);">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead style="visibility: collapse;">
+        <tr>
+          <th>Номер сборки</th>
+          <th>Ошибок на сборку</th>
+          <th v-if="!$route.params.build">Количество запросов</th>
+          <th v-if="!$route.params.build">Среднее время ответа сервера</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="build in jobData" v-bind:class="[build.error_count > 0 ? 'text-danger' : '', '']">
+            <td>
+              <router-link :to="{ path: '/job/' + $route.params.name + '/' + build._id}"> Сборка: {{ build._id }}
+              </router-link>
+            </td>
+            <td>Ошибок: {{ build.error_count }}</td>
+            <td v-if="!$route.params.build">Запросов: {{ build.requests }}</td>
+            <td v-if="!$route.params.build">Время ответа ср.: {{ build.elapsed_time }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,8 @@
+<div class="job">
+  <h2 class="text-light">Проекты</h2>
+  <ul class="nav nav-pills flex-column">
+    <li v-for="job in job_list" class="pt-2 pb-2 nav-item">
+      <router-link :to="{ path: '/job/' + job}" class="text-light br-w"> {{ job }} </router-link>
+    </li>
+  </ul>
+</div>

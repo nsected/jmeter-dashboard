@@ -1,0 +1,24 @@
+.axis {
+  font-size: 11pt;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.chart-link{
+  cursor: pointer;
+}
+
+/*#buildPerformanceChart .axis--y text{*/
+  /*font-size: 0.5em;*/
+/*}*/
+
+.build-table td{
+  font-size: 0.8em!important;
+}
+
+.error{
+  background-color: #c3000021;
+}

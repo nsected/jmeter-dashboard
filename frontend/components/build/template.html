@@ -1,0 +1,66 @@
+<div class="build-item" id="build-item-from" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+  <div class=" pt-3 build-wrapper">
+    <h2 class="pl-2">Сборка <br/>{{ build }}</h2>
+    <div style="  height: 450px">
+      <svg width="70%" height="450" id="buildPerformanceChart">
+        <text transform="translate(20,20)">Загрузка...</text>
+      </svg>
+      <div id="donut-wrapper">
+        <div class="pr-4">
+          <h4>Статистика</h4>
+          <table class="mb-4">
+          <tbody>
+          <tr><td class="col-1">Запросов</td><td>{{buildData.length}}</td></tr>
+          <tr><td class="col-1">Ответ среднее</td><td>{{elapsedAvg}}мс.</td></tr>
+          <tr><td class="col-1">Процент ошибок</td><td>{{errPercentage}}%</td></tr>
+          <tr><td class="col-1">Время теста</td><td>{{testTime}}мин.</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <svg width="100%" height="200" id="donutChart">
+          <text transform="translate(20,20)">Загрузка...</text>
+        </svg>
+        <svg width="100%" id="donutLegend"></svg>
+      </div>
+    </div>
+    <table class="build-table mt-3">
+      <tbody>
+      <tr class="row no-gutters br-w font-weight-bold">
+        <td class="col-1">Байт принято</td>
+        <td class="col-2">Время <br>соединения</td>
+        <td class="col-1">Всего <br>времени</td>
+        <td class="col-1">Ошибок</td>
+        <td class="col-1">Ответ мс</td>
+        <td class="col-1">Код ответа</td>
+        <td class="col-2">Ответ <br>сервера</td>
+        <td class="col-1">Послано <br>байт</td>
+        <td class="col-2">Дата</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pt-3 fx-scroll bg-light build-table-contant"  id="build-item-to">
+    <span v-for="req in buildData">
+          <table class="table table-striped br-w" :id="'thread-' + req.thread">
+            <tbody class="">
+            <tr class="row  no-gutters">
+              <td colspan="5" class="col-1">№ {{ req.thread }}</td>
+              <td colspan="5" class="col-5">{{ req.thread_name }}</td>
+              <td colspan="5" class="col-6">{{ req.label }}</td>
+            </tr>
+            <tr class="row no-gutters">
+              <td class="col-1">{{ req.bytes }} б</td>
+              <td class="col-2">{{ req.connect_time }} мс</td>
+              <td class="col-1">{{ req.elapsed_time }} мс</td>
+              <td class="col-1">{{ req.error_flag }}</td>
+              <td class="col-1">{{ req.latency }} мс</td>
+              <td class="col-1">{{ req.response_code }}</td>
+              <td class="col-2">{{ req.response_message }}</td>
+              <td class="col-1">{{ req.sent_bytes }} б</td>
+              <td class="col-2">{{ req.time_stamp | dateFilter}}</td>
+            </tr>
+            </tbody>
+          </table>
+      </span>
+  </div>
+</div>
