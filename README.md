@@ -6,7 +6,9 @@ Jtl файлы jmeter загружаются при помощи backend/push_jm
 
 >Установка: 
 * npm install
-* npm express_start
+* npm run build
+* npm run express_start
+* mongorestore dump/ для восстановления демо базы
 
 ![alt tag](https://i.imgur.com/XjiU09c.png "Список сборок")
 Список сборок по проекту
