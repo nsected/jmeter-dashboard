@@ -1,5 +1,7 @@
 # Jmeter-dashboard
 
+This dashboard displays jmeter test results in a visual form
+
 Эта контрольная панель отображает результаты тестов jmeter в наглядном виде.
 
 Jtl файлы jmeter загружаются при помощи backend/push_jmeter_results.js
