@@ -4,6 +4,8 @@ This dashboard displays jmeter test results in a visual form
 
 Эта контрольная панель отображает результаты тестов jmeter в наглядном виде.
 
+Демо: http://18.221.224.74:3000
+
 Jtl файлы jmeter загружаются при помощи backend/push_jmeter_results.js
 
 >Установка: 
