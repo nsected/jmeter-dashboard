@@ -17,7 +17,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0-beta.2",
-    "bootstrap-vue": "^1.4.0",
+    "bootstrap-vue": "^2.0.0",
     "d3": "^4.12.2",
     "d3-tip": "^0.7.1",
     "express": "^4.16.2",
